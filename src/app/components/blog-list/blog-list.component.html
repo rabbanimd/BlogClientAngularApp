@@ -1,0 +1,41 @@
+<ul type="none">
+    <!-- li for #1 -->
+    <li>
+        <div class="contriner-fluid overflow-hidden">
+            <div class="row">
+                <div class="col-md-5 col-sm-12">
+                    <div class="card top-1 mb-2" >
+                        <div class="card-body">
+                            <h1 class="card-title p-2">{{blogs[0].title}}</h1>
+                            <h5 class="card-subtitle p-2">{{blogs[0].description}}</h5>
+                            <a href="#" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="row">
+                        <div class="card top-2 mb-2" style="max-height: 12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title p-2">{{blogs[0].title}}</h5>
+                                <p class="card-subtitle p-2">{{blogs[0].description}}</p>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                        <div class="card top-3 mb-2" style="max-height: 12rem;">
+                            <div class="card-body">
+                                <h5 class="card-title p-2">{{blogs[0].title}}</h5>
+                                <p class="card-subtitle p-2">{{blogs[0].description}}</p>
+                                <a href="#" class="stretched-link"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <!-- li for #2 -->
+    <!-- li for #3 -->
+    <li *ngFor="let blog of blogs">
+        <app-blog-element [current-item]="blog"></app-blog-element>
+    </li>
+</ul>

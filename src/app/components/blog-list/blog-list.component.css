@@ -1,0 +1,37 @@
+.top-1{
+    min-height: 30rem;
+    color: #fff;
+    background: #ee0979;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ff6a00, #ee0979);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border: 1px solid;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(56, 28, 28, 0.2);
+}
+
+
+.top-2{
+    color: #000;
+    min-height: 17rem;
+    background: #ef32d9;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #89fffd, #ef32d9);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #89fffd, #ef32d9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+border: 1px solid #fff;
+border-radius: 1rem;
+overflow: hidden;
+box-shadow: 5px 5px 5px rgba(56, 28, 28, 0.2);
+
+}
+.top-3{
+    min-height: 8rem;
+    color: #000;
+    background: #BE93C5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+border: 1px solid #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 5px 5px 5px rgba(56, 28, 28, 0.2);
+}

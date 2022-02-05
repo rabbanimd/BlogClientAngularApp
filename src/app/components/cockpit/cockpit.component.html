@@ -1,0 +1,19 @@
+<div class="container" *ngIf="error_message">
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        {{error_message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>  
+</div>
+<div class="container">
+    <form class="mb-3">
+        <label for="post_title" class="form-label">Title</label>
+        <input type="text" name="title" id="post_title" class="form-control" [(ngModel)]="newPost.title" (keyup)="titleChanged()" (paste)="titleChanged()"><span>{{count_title}}/{{MAX_TITLE_LENGTH}}</span><br>
+        <label for="post_desc">Description</label>
+       <textarea name="description" id="post_desc" cols="30" rows="2" class="form-control" [(ngModel)]="newPost.description" (keyup)="descChanged()" (paste)="descChanged()"></textarea><span>{{count_desc}}/{{MAX_DESC_LENGTH}}</span><br>
+        <label for="post_content">Main Content</label>
+      <angular-editor id="post_content" [placeholder]="'start writing here..'" name="content" [(ngModel)]="newPost.content" (keyup)="contentChanged()" (paste)="contentChanged()" ></angular-editor><span>{{count_content}}/{{MAX_CONTENT_LENGTH}}</span><br>
+      <button class="btn btn-primary" (click)="savePost()">Save Post</button>
+      </form>
+
+</div>
+
