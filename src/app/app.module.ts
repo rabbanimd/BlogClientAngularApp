@@ -8,7 +8,7 @@ import { BlogElementComponent } from './components/blog-list/blog-element/blog-e
 import { CockpitComponent } from './components/cockpit/cockpit.component';
 import { HttpClientModule} from '@angular/common/http';
 import { AngularEditorModule } from '@kolkov/angular-editor';
-import { BlogpageComponent } from './components/blog-list/blog-element/blogpage/blogpage.component';
+import { BlogpageComponent } from './components/blogpage/blogpage.component';
 
 @NgModule({
   declarations: [

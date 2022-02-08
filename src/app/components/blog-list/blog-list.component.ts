@@ -16,6 +16,7 @@ export class BlogListComponent implements OnInit {
   ngOnInit(): void {
     this.data.getAll().subscribe((res)=>{
       this.blogs = res.content;
+      console.log(this.blogs);
     }, (err) =>{
       console.log(err.message);
     });

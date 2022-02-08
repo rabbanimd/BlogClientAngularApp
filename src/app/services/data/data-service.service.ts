@@ -17,13 +17,17 @@ export class DataServiceService {
 
   getAll() {
     let url = this.server_url + `posts`;
-    console.log("requesting resourdes from " + url);
     return this.http.get<PageResponse>(url);
   }
 
   savePost(newPost : Blog) {
     let url = this.server_url + `posts`;
     return this.http.post<Blog>(url, newPost);
+  }
+
+  getContentById(postId:number){
+    let url = this.server_url + `posts/`+postId;
+    return this.http.get<Blog>(url);
   }
 
 }
