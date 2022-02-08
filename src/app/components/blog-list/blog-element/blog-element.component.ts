@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Blog } from 'src/app/model/blog';
 
 @Component({
@@ -11,9 +12,10 @@ export class BlogElementComponent implements OnInit {
   @Input('current-item') blog : Blog = {};
 
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
-
+  
+  
 }

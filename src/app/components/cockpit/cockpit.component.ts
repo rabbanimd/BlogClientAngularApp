@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog } from 'src/app/model/blog';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { DataServiceService } from 'src/app/services/data/data-service.service';
 
 @Component({
   selector: 'app-cockpit',
@@ -23,9 +24,8 @@ export class CockpitComponent implements OnInit {
   count_desc = 0;
   count_content = 0;
 
-
-
-  constructor() {
+  
+  constructor(private dataService:DataServiceService) {
   }
 
   
@@ -72,6 +72,12 @@ export class CockpitComponent implements OnInit {
     }
     else{
       // sAVE post
+      this.dataService.savePost(this.newPost).subscribe((res)=>{
+        console.log("Post added Successfully");
+        localStorage.clear();
+      }, (err)=>{
+        console.log(err.message);
+      });
       console.log("Accepted !");
       this.error_message = '';
     }

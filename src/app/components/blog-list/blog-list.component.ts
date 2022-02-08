@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Blog } from 'src/app/model/blog';
+import { DataServiceService } from 'src/app/services/data/data-service.service';
 import blogJson from '../../data/blog-data.json';
 @Component({
   selector: 'app-blog-list',
@@ -8,11 +9,16 @@ import blogJson from '../../data/blog-data.json';
 })
 export class BlogListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private data:DataServiceService) { }
 
-  blogs: Blog[] = blogJson;
+  blogs: any = blogJson;
 
   ngOnInit(): void {
+    this.data.getAll().subscribe((res)=>{
+      this.blogs = res.content;
+    }, (err) =>{
+      console.log(err.message);
+    });
   }
   
 

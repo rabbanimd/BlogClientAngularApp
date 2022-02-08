@@ -5,8 +5,6 @@ export interface Blog {
         description ?: string;
         content ?: string;
 
-
         // constructor() {}
-
 
 }
