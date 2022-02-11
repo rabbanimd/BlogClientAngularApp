@@ -35,3 +35,12 @@ border: 1px solid #fff;
     overflow: hidden;
     box-shadow: 5px 5px 5px rgba(56, 28, 28, 0.2);
 }
+
+.top{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 0.5rem 0.5rem 0 0;
+}

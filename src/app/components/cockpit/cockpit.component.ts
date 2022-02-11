@@ -74,6 +74,7 @@ export class CockpitComponent implements OnInit {
       // sAVE post
       this.dataService.savePost(this.newPost).subscribe((res)=>{
         console.log("Post added Successfully");
+        console.log(this.newPost.content);
         localStorage.clear();
       }, (err)=>{
         console.log(err.message);
